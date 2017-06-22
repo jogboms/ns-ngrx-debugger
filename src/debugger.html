@@ -1,0 +1,24 @@
+<Label class="show" (tap)="show = !show" text="Show Debug Panel"></Label>
+<StackLayout *ngIf="show">
+  <StackLayout *ngIf="states$ | async as states">
+    <ListView [items]="states" class="panel">
+      <ng-template let-item="item">
+        <GridLayout class="state" columns="*, auto, auto">
+          <Label class="info" [text]="item"></Label>
+          <Label col="1" class="btn" (tap)="dump(item)" text="DUMP"></Label>
+          <Label col="2" class="btn" (tap)="expand(item)" text="EXPAND"></Label>
+        </GridLayout>
+      </ng-template>
+    </ListView>
+    <StackLayout class="panel expanded" *ngIf="expanded">
+      <ListView [items]="expanded">
+        <ng-template let-item="item">
+          <GridLayout class="state" columns="*, auto">
+            <Label class="info" [text]="item"></Label>
+            <Label col="1" class="btn" (tap)="dump(item)" text="DUMP"></Label>
+          </GridLayout>
+        </ng-template>
+      </ListView>
+    </StackLayout>
+  </StackLayout>
+</StackLayout>

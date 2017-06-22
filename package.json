@@ -1,0 +1,62 @@
+{
+  "name": "ns-ngrx-debugger",
+  "version": "0.0.1",
+  "description": "A minimal nativescript debugger for ngrx-store & ngrx-effects",
+  "main": "index",
+  "typings": "index.d.ts",
+	"nativescript": {
+		"platforms": {
+			"android": "3.0.1",
+      "ios": "3.0.1"
+		}
+	},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jogboms/ns-ngrx-debugger.git"
+  },
+  "keywords": [
+    "angular",
+    "angular2",
+    "ng2",
+    "ngx",
+    "ngrx",
+    "store",
+    "ns",
+    "redux",
+    "nativescript"
+  ],
+  "author": "Jeremiah Ogbomo <jeremiahogbomo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jogboms/ns-ngrx-debugger/issues"
+  },
+  "homepage": "https://github.com/jogboms/ns-ngrx-debugger#readme",
+  "scripts": {
+    "build": "tsc -p .",
+    "setup": "npm i && npm run build"
+  },
+  "dependencies": {
+    "@angular/animations": "~4.1.0",
+    "@angular/common": "~4.1.0",
+    "@angular/compiler": "~4.1.0",
+    "@angular/core": "~4.1.0",
+    "@angular/forms": "~4.1.0",
+    "@angular/http": "~4.1.0",
+    "@angular/platform-browser": "~4.1.0",
+    "@angular/router": "~4.1.0",
+    "@ngrx/core": "^1.2.0",
+    "@ngrx/effects": "^2.0.3",
+    "@ngrx/store": "^2.2.2",
+    "@ngrx/store-devtools": "^3.2.4",
+		"rimraf": "^2.5.1",
+    "nativescript-angular": "~3.0.0",
+    "reflect-metadata": "~0.1.8",
+    "rxjs": "~5.3.0",
+    "sass": "^1.0.0-beta.1",
+    "tns-core-modules": "~3.0.0"
+  },
+  "devDependencies": {
+    "nativescript-dev-typescript": "~0.4.0",
+    "typescript": "~2.2.1"
+  }
+}

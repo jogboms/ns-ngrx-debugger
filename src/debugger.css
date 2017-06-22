@@ -1,0 +1,32 @@
+﻿.show {
+  width: 100%;
+  color: darkgray;
+  padding: 5;
+  background-color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+.panel {
+  padding: 3;
+  background-color: #f6f6f6;
+}
+.panel .btn {
+  font-size: 12;
+  padding: 3;
+  color: darkgray;
+  border-width: 1;
+  border-color: #eee;
+}
+.panel .state {
+  padding: 5;
+  vertical-align: center;
+}
+.panel .state Label.info {
+  color: darkgray;
+  font-size: 13;
+  text-transform: uppercase;
+}
+.expanded {}
+.expanded .state {
+  background-color: #eee;
+}

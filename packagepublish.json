@@ -1,0 +1,40 @@
+{
+  "name": "ns-ngrx-debugger",
+  "version": "0.0.1",
+  "description": "A minimal nativescript debugger for ngrx-store & ngrx-effects",
+  "main": "index",
+  "typings": "index.d.ts",
+	"nativescript": {
+		"platforms": {
+			"android": "3.0.1",
+      "ios": "3.0.1"
+		}
+	},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jogboms/ns-ngrx-debugger.git"
+  },
+  "keywords": [
+    "angular",
+    "angular2",
+    "ng2",
+    "ngx",
+    "ngrx",
+    "store",
+    "ns",
+    "redux",
+    "nativescript"
+  ],
+  "author": "Jeremiah Ogbomo <jeremiahogbomo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jogboms/ns-ngrx-debugger/issues"
+  },
+  "homepage": "https://github.com/jogboms/ns-ngrx-debugger#readme",
+  "scripts": {
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
