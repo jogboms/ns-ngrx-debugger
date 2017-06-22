@@ -38,6 +38,26 @@ doc
 lib
 test
 
+node_modules
+dist
+dev
+docs
+doc
+lib
+# build
+test
+hooks
+src
+src/package.json
+src/app/app*
+src/app/App_Resources
+src/app/fonts
+src/app/package.json
+src/hooks
+src/lib
+src/node_modules
+src/platforms
+
 Thumbs.db
 .DS_Store
 *.ts
@@ -45,6 +65,7 @@ Thumbs.db
 *.yml
 src/*
 src/package.json
+src/node_modules
 src/app/App_Resources
 src/app/app.*
 src/app/assets

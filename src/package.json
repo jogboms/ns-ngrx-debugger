@@ -1,0 +1,42 @@
+{
+  "name": "ns-ngrx-debugger",
+  "version": "0.0.1",
+  "description": "A minimal nativescript debugger for ngrx-store & ngrx-effects",
+  "license": "MIT",
+  "readme": "NativeScript Ngrx Debugger",
+  "repository": "https://github.com/jogboms/ns-ngrx-debugger.git",
+  "nativescript": {
+    "id": "org.nativescript.ns-ngrx-debugger",
+    "tns-ios": {
+      "version": "3.0.1"
+    },
+    "tns-android": {
+      "version": "3.0.1"
+    }
+  },
+  "dependencies": {
+    "@angular/common": "~4.1.0",
+    "@angular/compiler": "~4.1.0",
+    "@angular/core": "~4.1.0",
+    "@angular/platform-browser": "~4.1.0",
+    "@ngrx/core": "^1.2.0",
+    "@ngrx/effects": "^2.0.3",
+    "@ngrx/store": "^2.2.2",
+    "nativescript-angular": "~3.0.0",
+    "ns-ngrx-debugger": "../",
+    "nativescript-theme-core": "~1.0.2",
+    "reflect-metadata": "~0.1.8",
+    "rxjs": "~5.3.0",
+    "tns-core-modules": "~3.0.0"
+  },
+  "devDependencies": {
+    "babel-traverse": "6.23.1",
+    "babel-types": "6.23.0",
+    "babylon": "6.16.1",
+    "lazy": "1.0.11",
+    "nativescript-dev-typescript": "~0.4.0",
+    "tns-core-modules": "~3.0.0",
+    "typescript": "~2.2.1",
+    "zone.js": "~0.7.2"
+  }
+}
