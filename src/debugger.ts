@@ -10,9 +10,10 @@ import 'rxjs/add/operator/distinctUntilChanged';
 declare var Object;
 
 @Component({
+  moduleId: module.id,
   selector: "ns-ngrx-debugger",
   styleUrls: ['./debugger.css'],
-  templateUrl: './debugger',
+  templateUrl: './debugger.html',
 })
 export class Debugger implements OnInit, OnDestroy {
   states$: Observable<any[]>;
@@ -25,7 +26,7 @@ export class Debugger implements OnInit, OnDestroy {
   constructor(private store$: Store<any>, private actions$: Actions){}
 
   ngOnInit() {
-    this.Sub = this.actions$.do(({ type }) => console.log('ACTION: -'+type+'-')).subscribe();
+    this.Sub = this.actions$.do(({ type }) => console.log('[ACTION] '+type)).subscribe();
 
     this.states$ = this.store$
       .distinctUntilChanged()
