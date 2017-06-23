@@ -10,9 +10,10 @@ import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/scan';
 
-declare var Object;
+declare var Object, module;
 
 @Component({
+  moduleId: module.id,
   selector: "ns-ngrx-debugger",
   styleUrls: ['./debugger.css'],
   templateUrl: './debugger.html',
