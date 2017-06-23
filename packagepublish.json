@@ -1,6 +1,6 @@
 {
   "name": "ns-ngrx-debugger",
-  "version": "0.0.1b",
+  "version": "0.0.5",
   "description": "A minimal nativescript debugger for ngrx-store & ngrx-effects",
   "main": "index",
   "typings": "index.d.ts",
@@ -32,6 +32,15 @@
   },
   "homepage": "https://github.com/jogboms/ns-ngrx-debugger#readme",
   "scripts": {
+    "build": "ngc && npm run tsc",
+    "clean": "rm -rf src/platforms",
+    "prebuild": "npm i && cd src && npm i",
+    "preparedemo": "npm run build; cd src; tns plugin remove ns-ngrx-debugger; tns plugin add ..; tns install",
+    "tsc": "tsc -p .",
+    "prepare": "cp package.json packagedev.json && mv packagepublish.json package.json",
+    "complete": "mv package.json packagepublish.json && mv packagedev.json package.json",
+    "push-pub": "git push origin && git push origin --tags && npm run prepare && npm publish && npm run complete",
+    "setup": "npm run build"
   },
   "dependencies": {
   },

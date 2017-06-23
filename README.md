@@ -31,7 +31,7 @@ export class AppModule { }
 ``` html
 <ActionBar title="Hello"></ActionBar>
 
-<ns-ngrx-debugger></ns-ngrx-debugger>
+<ns-ngrx-debugger [hidden]="false"></ns-ngrx-debugger>
 ```
 
 * Thats all. No dependencies. 

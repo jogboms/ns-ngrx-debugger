@@ -1,6 +1,6 @@
 {
   "name": "ns-ngrx-debugger",
-  "version": "0.0.1b",
+  "version": "0.0.5",
   "description": "A minimal nativescript debugger for ngrx-store & ngrx-effects",
   "license": "MIT",
   "readme": "NativeScript Ngrx Debugger",

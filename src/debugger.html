@@ -1,24 +1,32 @@
-<Label class="show" (tap)="show = !show" text="Show Debug Panel"></Label>
-<StackLayout *ngIf="show">
-  <StackLayout *ngIf="states$ | async as states">
-    <ListView [items]="states" class="panel">
-      <ng-template let-item="item">
-        <GridLayout class="state" columns="*, auto, auto">
-          <Label class="info" [text]="item"></Label>
-          <Label col="1" class="btn" (tap)="dump(item)" text="DUMP"></Label>
-          <Label col="2" class="btn" (tap)="expand(item)" text="EXPAND"></Label>
-        </GridLayout>
-      </ng-template>
-    </ListView>
-    <StackLayout class="panel expanded" *ngIf="expanded">
-      <ListView [items]="expanded">
-        <ng-template let-item="item">
-          <GridLayout class="state" columns="*, auto">
-            <Label class="info" [text]="item"></Label>
-            <Label col="1" class="btn" (tap)="dump(item)" text="DUMP"></Label>
-          </GridLayout>
-        </ng-template>
-      </ListView>
-    </StackLayout>
-  </StackLayout>
-</StackLayout>
+<ng-container *ngIf="hidden == false">
+  <AbsoluteLayout *ngIf="actions$ | async">
+
+    <ng-container *ngIf="position$ | async as position">
+      <Button (pan)="pan$.next({ top: $event.deltaY, left: $event.deltaX })" class="toggle" [top]="position.top" [left]="position.left" (tap)="toggle = !toggle" text="!"></Button>
+    </ng-container>
+
+    <ScrollView width="100%" height="100%" padding="10 0" *ngIf="states$ | async as states">
+      <StackLayout class="container" *ngIf="toggle">
+        <ListView [items]="states" class="panel">
+          <ng-template let-item="item">
+            <GridLayout class="state" columns="*, auto, auto">
+              <Label [text]="item"></Label>
+              <Button col="1" (tap)="onExpand(item)" text="expand"></Button>
+              <Button col="2" (tap)="onDump(item)" text="dump"></Button>
+            </GridLayout>
+          </ng-template>
+        </ListView>
+
+        <ListView [items]="expanded" class="panel expanded">
+          <ng-template let-item="item">
+            <GridLayout class="state" columns="*, auto">
+              <Label [text]="item"></Label>
+              <Button col="1" (tap)="onDump(item)" text="dump"></Button>
+            </GridLayout>
+          </ng-template>
+        </ListView>
+      </StackLayout>
+    </ScrollView>
+
+  </AbsoluteLayout>
+</ng-container>

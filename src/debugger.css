@@ -1,32 +1,40 @@
-﻿.show {
-  width: 100%;
-  color: darkgray;
-  padding: 5;
-  background-color: white;
+﻿.toggle {
+  border-radius: 200;
+  height: 50;
+  width: 50;
+  font-weight: bold;
+  font-size: 20;
+  border-color: whitesmoke;
+  z-index: 2;
+  opacity: .85;
+}
+Button {
+  font-size: 11;
+  padding: 3px;
   text-align: center;
+  color: white;
   text-transform: uppercase;
-}
-.panel {
-  padding: 3;
-  background-color: #f6f6f6;
-}
-.panel .btn {
-  font-size: 12;
-  padding: 3;
-  color: darkgray;
+  height: 30;
+  width: auto;
   border-width: 1;
-  border-color: #eee;
+  border-color: #484c55;
+  background-color: #4f5a66;
 }
+.container {
+  background-color: rgba(42, 47, 59, 0.85);
+  z-index: 1;
+  height: 100%;
+}
+.panel { padding: 3; }
 .panel .state {
   padding: 5;
   vertical-align: center;
 }
-.panel .state Label.info {
-  color: darkgray;
+.panel .state Label {
+  color: white;
   font-size: 13;
+  vertical-align: center;
   text-transform: uppercase;
 }
-.expanded {}
-.expanded .state {
-  background-color: #eee;
-}
+.expanded { padding-left: 4 }
+.expanded .state { background-color: #484c55; }
