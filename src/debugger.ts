@@ -10,7 +10,7 @@ import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/scan';
 
-declare var Object, module;
+declare var Object;
 
 @Component({
   moduleId: module.id,
